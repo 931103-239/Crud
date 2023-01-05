@@ -56,7 +56,9 @@ public class LoginController {
     }
 
     @GetMapping("/login") // 로그인 페이지
-    public String loginForm() {
+    public String loginForm(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        session.invalidate();
         return "loginForm";
     }
 

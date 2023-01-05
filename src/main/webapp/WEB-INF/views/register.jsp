@@ -3,7 +3,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page session="false"%>
 <c:set var="loginId" value="${pageContext.request.getSession(false)==null ? '비회원' : pageContext.request.session.getAttribute('id')}"/>
-<c:set var="loginId" value="${pageContext.request.getSession(true)==null ? pageContext.request.session.getAttribute('id') : '비회원'}"/>
 <c:set var="loginOut" value="${loginId=='비회원' ? '로그인' : '로그아웃'}"/>
 <c:set var="loginOutLink" value="${loginId=='' ? '/login/login' : '/login/logout'}"/>
 <!DOCTYPE html>
@@ -44,15 +43,15 @@
             <form:form modelAttribute="userDTO" action="${pageContext.request.contextPath}/login/join" method="POST">
                 <div class="main-lineout">
                     <h1 class="main-join-title"><a href="#">REGISTER</a></h1>
-                    <label for="user-id">아이디 : <span id="msg" class="msg"><form:errors path="id"/> </span></label>
+                    <label for="user-id">아이디 : <span class="msg"><form:errors path="id"/> </span></label>
                     <input type="text" id="user-id" name="id" placeholder="8~16자리의 대소문자와 숫자 조합">
-                    <label for="user-pw">비밀번호 : <span id="msg" class="msg"><form:errors path="pw"/> </span></label>
+                    <label for="user-pw">비밀번호 : <span class="msg"><form:errors path="pw"/> </span></label>
                     <input type="password" id="user-pw" name="pw" placeholder="8자리 이상 대소문자와 숫자, 특수문자 조합">
-                    <label for="user-name">이름 : <span id="msg" class="msg"><form:errors path="name"/> </span></label>
+                    <label for="user-name">이름 : <span class="msg"><form:errors path="name"/> </span></label>
                     <input type="text" id="user-name" name="name" placeholder="이상국">
-                    <label for="user-email">이메일 : <span id="msg" class="msg"><form:errors path="email"/> </span></label>
+                    <label for="user-email">이메일 : <span class="msg"><form:errors path="email"/> </span></label>
                     <input type="email" id="user-email" name="email" placeholder="ksl0097@naver.com">
-                    <label for="user-birth">생일 : <span id="msg" class="msg"><form:errors path="birth"/> </span></label>
+                    <label for="user-birth">생일 : <span class="msg"><form:errors path="birth"/> </span></label>
                     <input type="date" id="user-birth" name="birth" placeholder="1993-11-03">
                     <button class="join-btn" type="submit">가입하기</button>
                 </div><!--.main-lineout-->

@@ -5,5 +5,8 @@
 <configuration>
     <typeAliases>
         <typeAlias alias="UserDTO" type="com.lsk.myapp.domain.UserDTO"/>
+        <typeAlias alias="BoardDTO" type="com.lsk.myapp.domain.BoardDTO"/>
+        <typeAlias alias="PageHandler" type="com.lsk.myapp.domain.PageHandler"/>
+        <typeAlias alias="SearchCondition" type="com.lsk.myapp.domain.SearchCondition"/>
     </typeAliases>
 </configuration>
