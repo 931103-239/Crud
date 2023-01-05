@@ -52,7 +52,7 @@
                     <label for="user-email">이메일 : <span id="msg" class="msg"><form:errors path="email"/> </span></label>
                     <input type="email" id="user-email" name="email" placeholder="ksl0097@naver.com">
                     <label for="user-birth">생일 : <span id="msg" class="msg"><form:errors path="birth"/> </span></label>
-                    <input type="date" id="user-birth" name="birth" placeholder="2022-07-12">
+                    <input type="date" id="user-birth" name="birth" placeholder="1993-11-03">
                     <button class="join-btn" type="submit">가입하기</button>
                 </div><!--.main-lineout-->
             </form:form><!--/form-->

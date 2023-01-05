@@ -14,6 +14,7 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public UserDTO selectUser(String id)  { return userDAO.select(id); }
+
     @Override
     public int register(UserDTO userDTO) { return userDAO.insert(userDTO); }
 }
